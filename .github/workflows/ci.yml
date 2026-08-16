@@ -27,9 +27,13 @@ jobs:
           pip install -r requirements.txt
 
       - name: 🧪 Run PyTest Automated Test Suite
+        env:
+          PYTHONPATH: .
         run: |
-          pytest tests/ -v
+          python -m pytest tests/ -v
 
       - name: ⚡ Validate ONNX Export & INT8 Quantization
+        env:
+          PYTHONPATH: .
         run: |
           python -m src.optimization.export_onnx
