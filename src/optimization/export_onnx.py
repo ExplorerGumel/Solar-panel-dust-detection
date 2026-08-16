@@ -5,7 +5,7 @@ import torch
 import onnx
 import onnxruntime as ort
 from onnxruntime.quantization import quantize_dynamic, QuantType
-from ..models.swin_classifier import build_model
+from src.models.swin_classifier import build_model
 
 def export_to_onnx(model, save_path="./model_store/swin_solar_panel.onnx", img_size=224):
     """
