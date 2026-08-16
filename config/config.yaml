@@ -1,0 +1,30 @@
+data:
+  dataset_path: "C:\\Users\\USER\\.cache\\kagglehub\\datasets\\salonipandagale\\solar-panel-defect-classification-dl-project\\versions\\1\\Data"
+  image_size: 224
+  batch_size: 16
+  num_workers: 0
+  train_split: 0.8
+  seed: 42
+
+model:
+  architecture: "swin_t"
+  num_classes: 6
+  pretrained: true
+  learning_rate: 0.0001
+  weight_decay: 0.0001
+  epochs: 8
+
+loss:
+  type: "focal_loss"
+  gamma: 2.0
+  use_class_weights: true
+
+export:
+  model_dir: "./model_store"
+  onnx_filename: "swin_solar_panel.onnx"
+  int8_filename: "swin_solar_panel_int8.onnx"
+  opset_version: 14
+
+server:
+  host: "127.0.0.1"
+  port: 8000

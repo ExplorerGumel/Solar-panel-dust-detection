@@ -1,0 +1,27 @@
+# Python Bytecode & Caches
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Model Checkpoints & ONNX Storage
+model_store/
+*.pth
+*.pt
+*.onnx
+
+# Experiment Results & Raw Data
+experiment_results/
+Data/
+*.png
+*.jpg
+
+# Environments & OS
+.venv/
+venv/
+ENV/
+.env
+.DS_Store
+Thumbs.db
